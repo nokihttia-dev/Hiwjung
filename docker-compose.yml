@@ -1,0 +1,37 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000" # ให้ตรงกับ .env
+    env_file:
+      - ./backend/.env # โหลดค่าจาก .env
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./backend/uploads:/app/uploads
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "81:80"
+    environment:
+      - VITE_API_URL=http://localhost:5000
+    networks:
+      - app-network
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

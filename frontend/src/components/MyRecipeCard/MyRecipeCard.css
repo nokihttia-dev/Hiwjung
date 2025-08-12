@@ -1,0 +1,78 @@
+.myrecipe-card {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #28a745;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.myrecipe-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  background-color: #ffffff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.myrecipe-card-content {
+  padding: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.myrecipe-card-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #28a745;
+  transition: color 0.3s ease;
+}
+
+.myrecipe-card-content p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}
+
+.myrecipe-card-details {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: #444;
+}
+.myrecipe-card-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #218838;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+

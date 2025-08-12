@@ -1,0 +1,12 @@
+# Frontend .dockerignore (place in frontend folder)
+node_modules
+npm-debug.log
+.git
+.gitignore
+README.md
+.env
+.env.local
+.env.production
+.env.development
+dist
+.cache
